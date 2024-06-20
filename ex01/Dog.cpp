@@ -1,13 +1,14 @@
 #include "Dog.hpp"
 
 Dog::Dog(void){
+    this->Fratm = new Brain();
     this->type = "Dog";
     std::cout << "Constructor " << this->type << "         called" << std::endl;
 }
 
 Dog::Dog(const Dog& other): Animal(other) {
     std::cout << "Copy constructor called" << std::endl;
-    *this = other; // Utilizza l'operatore di assegnazione per copiare il valore
+    *this = other;
 }
 
 Dog::~Dog(void){

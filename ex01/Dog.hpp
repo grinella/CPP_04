@@ -2,9 +2,13 @@
 
 #include <iostream>
 #include <string>
+#include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog: public Brain {
+class Dog: public Animal {
+    private:
+        Brain* Fratm;
+
     public:
         Dog();
         Dog(const Dog& other);

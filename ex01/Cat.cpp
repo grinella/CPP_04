@@ -1,17 +1,18 @@
 #include "Cat.hpp"
 
 Cat::Cat(void){
+    this->Gigi = new Brain();
     this->type = "Cat";
     std::cout << "Constructor " << this->type << "         called" << std::endl;
 }
 
 Cat::Cat(const Cat& other): Animal(other) {
     std::cout << "Copy constructor called" << std::endl;
-    *this = other; // Utilizza l'operatore di assegnazione per copiare il valore
-}
+    *this = other;
+    }
 
 Cat::~Cat(void){
-    std::cout << "Destructor " << this->type << "         called" << std::endl;
+    std::cout << "Destructor Cat         called" << std::endl;
 }
 
 void Cat::makeSound() const{
