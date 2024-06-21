@@ -20,5 +20,6 @@ void WrongCat::makeSound() const{
 
 WrongCat &WrongCat::operator=(const WrongCat &src) {
     std::cout << "Copy WrongCat assignment operator called." << std::endl;
-    return *this = src;
+    this->type = src.type;
+    return *this;
 }

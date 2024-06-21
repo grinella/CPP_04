@@ -5,15 +5,15 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat: public Animal{
+class Dog: public Animal {
     private:
-        Brain* Gigi;
+        Brain* Fratm;
 
     public:
-        Cat();
-        Cat(const Cat& other);
-        ~Cat();
+        Dog();
+        Dog(const Dog& other);
+        ~Dog();
 
         void makeSound() const;
-        Cat &operator=(const Cat &src);
+        Dog &operator=(const Dog &src);
 };

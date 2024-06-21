@@ -20,5 +20,6 @@ void Cat::makeSound() const{
 
 Cat &Cat::operator=(const Cat &src) {
     std::cout << "Copy Cat assignment operator called." << std::endl;
-    return *this = src;
+    this->type = src.type;
+    return *this;
 }

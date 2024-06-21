@@ -16,11 +16,10 @@ Animal::Animal(std::string type){
 }
 
 Animal::~Animal(void){
-    std::cout << "Destructor " << this->type;
     if (type == "Cat" || type == "Dog")
-        std::cout << "         called" << std::endl;
+        std::cout << "Destructor Animal\"" << this->type << "\" called" << std::endl;
     else
-        std::cout << "      called" << std::endl;
+        std::cout << "Destructor Animal      called" << std::endl;
 }
 
 std::string Animal::getType() const {
@@ -32,6 +31,7 @@ void Animal::makeSound() const {
 }
 
 Animal &Animal::operator=(const Animal &src) {
-    std::cout << "Copy assignment operator called." << std::endl;
-    return *this = src;
+    std::cout << "Copy assignment operator called.animal" << std::endl;
+    this->type = src.type;
+    return *this;
 }

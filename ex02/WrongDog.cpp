@@ -1,25 +1,25 @@
-#include "WrongCat.hpp"
+#include "WrongDog.hpp"
 
-WrongCat::WrongCat(void){
-    this->type = "WrongCat";
+WrongDog::WrongDog(void){
+    this->type = "WrongDog";
     std::cout << "Constructor " << this->type << "    called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& other): WrongAnimal(other){
+WrongDog::WrongDog(const WrongDog& other): WrongAnimal(other){
     std::cout << "Copy constructor called" << std::endl;
     *this = other; // Utilizza l'operatore di assegnazione per copiare il valore
 }
 
-WrongCat::~WrongCat(void){
+WrongDog::~WrongDog(void){
     std::cout << "Destructor " << this->type << "    called" << std::endl;
 }
 
-void WrongCat::makeSound() const{
+void WrongDog::makeSound() const{
     std::cout << "Bro non sono un gatto..." << std::endl;
 }
 
-WrongCat &WrongCat::operator=(const WrongCat &src) {
-    std::cout << "Copy WrongCat assignment operator called." << std::endl;
+WrongDog &WrongDog::operator=(const WrongDog &src) {
+    std::cout << "Copy WrongDog assignment operator called." << std::endl;
     this->type = src.type;
     return *this;
 }

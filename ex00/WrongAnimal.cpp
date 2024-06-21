@@ -18,7 +18,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal& other) {
     *this = other; // Utilizza l'operatore di assegnazione per copiare il valore
 }
 
-WrongAnimal::WrongAnimal(std::string type){
+WrongAnimal::WrongAnimal(std::string type) {
     this->type = type;
     std::cout << "Constructor " << this->type << " called" << std::endl;
 }
@@ -34,5 +34,6 @@ void WrongAnimal::makeSound() const {
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src) {
     std::cout << "Copy assignment operator called." << std::endl;
-    return *this = src;
+    this->type = src.type;
+    return *this;
 }

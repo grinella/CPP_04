@@ -7,6 +7,7 @@
 
 int main()
 {
+    // const Animal*       f = new Animal(); // per verificare se é astratto
     const Animal*       i = new Cat();
     const Animal*       j = new Dog();
 

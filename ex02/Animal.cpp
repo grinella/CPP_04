@@ -26,14 +26,12 @@ std::string Animal::getType() const {
     return(this->type);
 }
 
-void Animal::makeSound() const {
-    std::cout << "Animal: ..................." << std::endl;
-}
+// void Animal::makeSound() const {
+//     std::cout << "Animal: ..................." << std::endl;
+// } // levato
 
 Animal &Animal::operator=(const Animal &src) {
-    std::cout << "Copy assignment operator called." << std::endl;
-    if (this == &src) {
-        return *this;
-    }
-    return *this = src;
+    std::cout << "Copy assignment operator called.animal" << std::endl;
+    this->type = src.type;
+    return *this;
 }

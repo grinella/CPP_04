@@ -20,5 +20,6 @@ void Dog::makeSound() const {
 
 Dog &Dog::operator=(const Dog &src) {
     std::cout << "Copy Dog assignment operator called." << std::endl;
-    return *this = src;
+    this->type = src.type;
+    return *this;
 }

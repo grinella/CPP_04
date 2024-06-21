@@ -1,6 +1,6 @@
 flags = -Wall -Wextra -Werror -std=c++98 -g
 
-name=I_want_to_set_the_world_on_fire
+name=Abstract
 
 all:
 	@clear
